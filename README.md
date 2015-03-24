@@ -1,9 +1,7 @@
 
-#This and my first project Mobile
+#This is my first mobile project
 
-##TodoApp
-
-###Test basically app
+#TodoApp
 
 ## Installation
 
@@ -16,7 +14,7 @@ $ npm install -g cordova ionic bower
 To run:
 
 ```
-$ Grunt
+$ grunt
 ```
 
 ## Contributing

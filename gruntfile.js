@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				},
 			},
 		},
-
+		// Watch task
 		watch: {
 			options: {
 					livereload: true,
@@ -59,6 +59,30 @@ module.exports = function(grunt) {
 				}],
 			},
 		},
+		//Uglify task
+		uglify: {
+			all: {
+				files: [{
+					expand: true,
+					cwd: 'src',
+					src: ['**/*.js'],
+					dest: 'www',
+					ext: '.js',
+				}],
+			},
+		},
+		//CSSmin task
+		cssmin: {
+			all: {
+				files: [{
+					expand: true,
+					cwd: 'src',
+					src: ['**/*.css'],
+					dest: 'www',
+					ext: '.css',
+				}],
+			},
+		},
 
 		//Clean task
 		clean: {
@@ -75,7 +99,9 @@ module.exports = function(grunt) {
 		'clean',
 		'copy',
 		'jade',
+		'cssmin',
 		'connect',
+		'uglify',
 		'watch'
 
 	]);
