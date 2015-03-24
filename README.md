@@ -16,7 +16,7 @@ $ npm install -g cordova ionic bower
 To run:
 
 ```
-$ ionic serve
+$ Grunt
 ```
 
 ## Contributing

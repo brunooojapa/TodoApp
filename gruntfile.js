@@ -7,6 +7,29 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 
+		// Start and supervise web server using socket.io
+		connect : {
+			all: {
+				options: {
+					base: 'www',
+					hostname: 'localhost',
+					livereload: true,
+					open: true,
+					port: 8100,
+				},
+			},
+		},
+
+		watch: {
+			options: {
+					livereload: true,
+				},
+				html: {
+				files: ['src/**/*.jade'],
+				tasks: ['jade'],
+				},
+			},
+
 		// Compile Jade templates
 		jade: {
 			all: {
@@ -51,7 +74,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [
 		'clean',
 		'copy',
-		'jade'
+		'jade',
+		'connect',
+		'watch'
+
 	]);
 
 	// LOAD
