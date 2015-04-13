@@ -8,7 +8,7 @@ angular
         'starter.filters'
     ])
 
-      .run(function($ionicPlatform) {
+      .run(['$ionicPlatform', function($ionicPlatform) {
 
           $ionicPlatform.ready(function() {
             if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -19,7 +19,7 @@ angular
               }
           });
 
-    })
+    }])
 
 
 .config(function() {
