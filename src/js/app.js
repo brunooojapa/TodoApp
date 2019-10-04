@@ -22,7 +22,7 @@ angular
     }])
 
 
-.config(function() {
+// .config(function() {
 
-})
+// })
 
